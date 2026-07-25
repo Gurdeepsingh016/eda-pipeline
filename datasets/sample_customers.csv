@@ -1,0 +1,12 @@
+CustomerID,Age,Gender,Tenure,MonthlyCharges,TotalCharges,Churn
+CUST-001,34,Male,12,65.5,786.0,No
+CUST-002,,Female,24,80.0,1920.0,Yes
+CUST-003,45,Male,3,1200.0,3600.0,Yes
+CUST-001,34,Male,12,65.5,786.0,No
+CUST-004,29,Female,36,45.2,1627.2,No
+CUST-005,52,,60,110.0,6600.0,No
+CUST-006,,Female,1,25.0,,Yes
+CUST-007,41,Male,18,95.0,1710.0,No
+CUST-008,38,Female,5,55.0,275.0,Yes
+CUST-009,50,Male,48,85.5,4104.0,No
+CUST-010,23,Female,2,30.0,60.0,Yes

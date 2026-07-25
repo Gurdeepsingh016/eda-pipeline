@@ -1,0 +1,9 @@
+TransactionID,Store,ProductCategory,Quantity,PriceUnit,Revenue
+T-1001,NEW YORK,Electronics,2,499.99,999.98
+T-1002,new york,Electronics,,499.99,
+T-1003,Chicago ,Clothing,5,29.99,149.95
+T-1004,CHICAGO,Home,1,150.00,150.00
+T-1005,Los Angeles,Electronics,10,1200.00,12000.00
+T-1001,NEW YORK,Electronics,2,499.99,999.98
+T-1006,Los angeles,Clothing,,19.99,
+T-1007,Miami,Home,3,45.00,135.00
