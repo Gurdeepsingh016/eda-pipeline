@@ -6,8 +6,10 @@ import Cleaning from './components/Cleaning';
 import Charts from './components/Charts';
 import Reports from './components/Reports';
 import Settings from './components/Settings';
+import LandingPage from './components/LandingPage';
 
 export default function App() {
+  const [currentView, setCurrentView] = useState('landing');
   const [activeTab, setActiveTab] = useState('upload');
   const [dataset, setDataset] = useState(null);
   const [isProcessing, setIsProcessing] = useState(false);
@@ -294,17 +296,22 @@ ORD-10006,CUST-220,Linda Garcia,29,F,France,elec,5,120.00,600.00,Bank Transfer,2
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       {/* Top Bar Header */}
       <header className="app-header">
-        <div className="brand-logo">
+        <div 
+          className="brand-logo" 
+          style={{ cursor: 'pointer' }} 
+          onClick={() => setCurrentView('landing')}
+        >
           <Sparkles size={24} style={{ color: 'var(--accent-primary)' }} />
           EDA Pipeline
           <span className="brand-badge">Pro Version</span>
         </div>
 
-        {/* Workflow Tabs */}
-        <nav className="workflow-nav">
-          <button
-            className={`nav-item ${activeTab === 'upload' ? 'active' : ''}`}
-            onClick={() => setActiveTab('upload')}
+        {/* Workflow Tabs (Only show if in 'app' view) */}
+        {currentView === 'app' ? (
+          <nav className="workflow-nav">
+            <button
+              className={`nav-item ${activeTab === 'upload' ? 'active' : ''}`}
+              onClick={() => setActiveTab('upload')}
           >
             <UploadCloud size={16} />
             1. Upload
@@ -353,27 +360,47 @@ ORD-10006,CUST-220,Linda Garcia,29,F,France,elec,5,120.00,600.00,Bank Transfer,2
             <SettingsIcon size={16} />
           </button>
         </nav>
+        ) : (
+          <nav className="workflow-nav">
+            <a href="https://github.com/Gurdeepsingh016/eda-pipeline" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+              <button className="nav-item">
+                GitHub
+              </button>
+            </a>
+            <button 
+              className="btn-primary" 
+              style={{ padding: '0.4rem 1rem', fontSize: '0.85rem' }}
+              onClick={() => setCurrentView('app')}
+            >
+              Launch App
+            </button>
+          </nav>
+        )}
       </header>
 
       {/* Main Container Body */}
       <main className="app-container" style={{ flex: 1 }}>
-        {activeTab === 'upload' && (
+        {currentView === 'landing' && (
+          <LandingPage onLaunch={() => setCurrentView('app')} />
+        )}
+
+        {currentView === 'app' && activeTab === 'upload' && (
           <Upload onDataLoaded={handleDataLoaded} sampleDatasets={sampleDatasets} />
         )}
 
-        {activeTab === 'dashboard' && (
+        {currentView === 'app' && activeTab === 'dashboard' && (
           <Dashboard dataset={dataset} onProceedToCleaning={() => setActiveTab('cleaning')} />
         )}
 
-        {activeTab === 'cleaning' && (
+        {currentView === 'app' && activeTab === 'cleaning' && (
           <Cleaning dataset={dataset} onProcessData={handleProcessData} isProcessing={isProcessing} />
         )}
 
-        {activeTab === 'charts' && (
+        {currentView === 'app' && activeTab === 'charts' && (
           <Charts edaData={edaData} />
         )}
 
-        {activeTab === 'reports' && (
+        {currentView === 'app' && activeTab === 'reports' && (
           <Reports
             reportData={reportData}
             onDownloadCSV={handleDownloadCSV}
@@ -383,7 +410,7 @@ ORD-10006,CUST-220,Linda Garcia,29,F,France,elec,5,120.00,600.00,Bank Transfer,2
           />
         )}
 
-        {activeTab === 'settings' && (
+        {currentView === 'app' && activeTab === 'settings' && (
           <Settings settings={null} onSaveSettings={() => {}} />
         )}
       </main>
