@@ -23,11 +23,10 @@ export default function Settings({ settings, onSaveSettings }) {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
       <form onSubmit={handleSave} className="glass-panel" style={{ padding: '2rem' }}>
-        <div className="settings-card">
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem' }}>
-              <Cpu size={18} style={{ color: 'var(--accent-secondary)' }} />
-              <h4 style={{ fontWeight: 600 }}>Processing Engine</h4>
-            </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.5rem' }}>
+          <SettingsIcon size={22} style={{ color: 'var(--accent-primary)' }} />
+          <h3 style={{ fontSize: '1.2rem', fontWeight: 700 }}>Pipeline & Engine Settings</h3>
+        </div>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem' }}>
           <div>
