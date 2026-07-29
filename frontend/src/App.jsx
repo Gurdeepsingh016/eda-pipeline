@@ -56,6 +56,26 @@ ORD-10004,CUST-305,michael jones,-5,male,Canada,Beauty,-10,,150.00,Cash on Deliv
 ORD-10005,CUST-198,,42,,UK,Books,3,15.50,46.50,,2024-04-05
 ORD-10002,CUST-109,mary johnson,,Female,United States,Clothing,,29.99,149.95,paypal,15/01/2024
 ORD-10006,CUST-220,Linda Garcia,29,F,France,elec,5,120.00,600.00,Bank Transfer,2024-01-15`
+    },
+    {
+      name: 'Extremely Messy Unstructured Data.csv',
+      description: 'Highly unstructured, heavily duplicated, with bizarre outliers and tons of missing values for stress testing.',
+      content: `ID,User Info,Age Data,Location Info,Purchase Value,Status
+1,john doe [admin],,,999.99,ACTIVE
+1,john doe [admin],,,999.99,ACTIVE
+1,john doe [admin],,,999.99,ACTIVE
+2,jane_smith88,twenty-two,NEW YORK CITY,,
+3,,999,usa,-150,CANCELLED
+3,,999,usa,-150,CANCELLED
+4,user_unknown,,uk,0.00,
+5,alice johnson,45,london UK,15.50,ACTIVE
+6,bob,   ,   ,   ,
+7,charlie,,FRANCE,999999.99,PENDING
+7,charlie,,FRANCE,999999.99,PENDING
+7,charlie,,FRANCE,999999.99,PENDING
+7,charlie,,FRANCE,999999.99,PENDING
+8,test user,12,CANADA,10,
+1,john doe [admin],,,999.99,ACTIVE`
     }
   ];
 
