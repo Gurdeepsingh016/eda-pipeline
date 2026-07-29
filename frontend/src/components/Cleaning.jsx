@@ -146,11 +146,11 @@ export default function Cleaning({ dataset, onProcessData, isProcessing }) {
             </div>
           </div>
 
-          {/* AI Smart Clean & Advanced Options */}
+          {/* Automated Smart Clean & Advanced Options */}
           <div className="glass-panel" style={{ padding: '1.75rem' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.25rem' }}>
               <Sparkles size={20} style={{ color: 'var(--accent-secondary)' }} />
-              <h3 style={{ fontSize: '1.1rem', fontWeight: 700 }}>AI Smart Clean & Formatting</h3>
+              <h3 style={{ fontSize: '1.1rem', fontWeight: 700 }}>Automated Cleaning & Formatting</h3>
             </div>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
@@ -167,7 +167,7 @@ export default function Cleaning({ dataset, onProcessData, isProcessing }) {
                 <div>
                   <div style={{ fontSize: '0.9rem', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
                     <Cpu size={16} style={{ color: 'var(--accent-secondary)' }} />
-                    Enable AI Auto-Cleaner
+                    Enable Advanced Auto-Cleaner
                   </div>
                   <div style={{ fontSize: '0.78rem', color: 'var(--text-secondary)' }}>Automated column type inference & smart repair</div>
                 </div>
@@ -246,7 +246,7 @@ export default function Cleaning({ dataset, onProcessData, isProcessing }) {
             style={{ padding: '1rem 3rem', fontSize: '1.1rem' }}
           >
             {isProcessing ? (
-              <>Running AI Data Cleaner...</>
+              <>Running Data Cleaner...</>
             ) : (
               <>
                 <Play size={20} />

@@ -126,11 +126,11 @@ export default function Reports({ reportData, onDownloadCSV, onDownloadRawCSV, o
 
       </div>
 
-      {/* AI Transformation Execution Log */}
+      {/* Transformation Execution Log */}
       <div className="glass-panel" style={{ padding: '1.75rem' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.25rem' }}>
           <Sparkles size={20} style={{ color: 'var(--accent-secondary)' }} />
-          <h3 style={{ fontSize: '1.1rem', fontWeight: 700 }}>AI Pipeline Audit Trail & Applied Actions</h3>
+          <h3 style={{ fontSize: '1.1rem', fontWeight: 700 }}>Pipeline Audit Trail & Applied Transformations</h3>
         </div>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>

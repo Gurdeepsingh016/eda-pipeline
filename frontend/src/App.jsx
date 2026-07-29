@@ -207,7 +207,7 @@ ORD-10006,CUST-220,Linda Garcia,29,F,France,elec,5,120.00,600.00,Bank Transfer,2
         `Applied IQR outlier capping (threshold: 1.5)`,
         `Normalized whitespace and text casing across categorical columns`
       ],
-      summary: 'AI Engine successfully audited and cleaned dataset. All missing values resolved.'
+      summary: 'Data processing engine successfully audited and cleaned dataset. All missing values resolved and formatting applied.'
     };
 
     setCleanedData(rows);
@@ -297,7 +297,7 @@ ORD-10006,CUST-220,Linda Garcia,29,F,France,elec,5,120.00,600.00,Bank Transfer,2
         <div className="brand-logo">
           <Sparkles size={24} style={{ color: 'var(--accent-primary)' }} />
           EDA Pipeline
-          <span className="brand-badge">AI Powered</span>
+          <span className="brand-badge">Pro Version</span>
         </div>
 
         {/* Workflow Tabs */}

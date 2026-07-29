@@ -1,6 +1,6 @@
-# EDA Pipeline — AI-Powered Data Cleaning & Analysis
+# EDA Pipeline - Data Cleaning & Analysis
 
-> **A modern, full-stack Exploratory Data Analysis (EDA) tool** with AI-assisted cleaning, interactive charts, and one-click CSV export. Built with React + Vite and a Python FastAPI backend.
+> **A modern, full-stack Exploratory Data Analysis (EDA) tool** with automated cleaning, interactive visualizations, and instant data profiling. Runs entirely in your browser with zero backend required.
 
 ![EDA Pipeline](https://img.shields.io/badge/React-18-blue?logo=react) ![Vite](https://img.shields.io/badge/Vite-5-purple?logo=vite) ![Recharts](https://img.shields.io/badge/Recharts-2-green) ![License](https://img.shields.io/badge/License-MIT-orange)
 
@@ -11,7 +11,7 @@
 | Feature | Description |
 |---|---|
 | 📤 **CSV Upload** | Drag & drop or click to upload any CSV dataset |
-| 🧠 **AI Auto-Clean** | Missing value imputation, outlier capping, duplicate removal |
+| ⚡ **Auto-Clean** | Missing value imputation, outlier capping, duplicate removal |
 | 📊 **EDA Charts** | Bar charts, donut/pie charts with custom color palettes |
 | 🗂️ **Data Preview** | Paginated table with null-cell highlighting |
 | 📋 **Quality Reports** | Health score, transformation log, downloadable HTML report |
